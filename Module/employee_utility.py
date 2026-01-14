@@ -1,7 +1,7 @@
 """
 Calculate employee salary  Module based on designation and leaves taken.
 """
-
+import logging
 
 def calculate_leaves(salary, leave_days):
 
@@ -13,6 +13,7 @@ def calculate_leaves(salary, leave_days):
     """
     if leave_days > 15:
         deduction = (salary / 30) * (leave_days - 15)
+        logging.info(f"Deduction for {leave_days} leave days is {deduction}")
     else:
         deduction = 0
     return deduction
@@ -47,6 +48,7 @@ def calculate_bonus(designation, base_salary):
         bonus = 5 / 100 * base_salary
     else:
         bonus = 0
+        logging.warning("Unknown designation. No bonus applied.")
     return bonus
 
 
