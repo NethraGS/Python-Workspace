@@ -52,10 +52,6 @@ def calculate_bill():
         total += PRICE[order["flavor"]]
     print("\nTotal Bill: ₹", total)
 
-
-# -------------------------
-# Program execution
-# -------------------------
 while True:
     print("\nAvailable Flavors:", MENU)
 
@@ -63,7 +59,7 @@ while True:
     serving = input("Enter serving (cone/cup): ").lower()
 
     toppings_input = input("Enter toppings (comma separated): ")
-    toppings = set(t.strip().lower() for t in toppings_input.split(","))  # unique toppings
+    toppings = set(t.strip().lower() for t in toppings_input.split(","))  
 
     place_order(flavor, serving, toppings)
 

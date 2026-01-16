@@ -4,6 +4,7 @@ class Employee:
         self.salary = salary
     def get_details(self):
         return f"Employee Name: {self.name}, Salary: {self.salary}" 
+    
 class Coder(Employee):
     def __init__(self, name, salary, programming_language):
         super().__init__(name, salary)
@@ -11,6 +12,7 @@ class Coder(Employee):
     def get_details(self):
         self.salary += 10000  # Coders get a bonus
         return f"Employee Name: {self.name}, Salary: {self.salary}, Programming Language: {self.programming_language}" 
+
 class Designer(Employee): 
     def __init__(self, name, salary, design_tool):
         super().__init__(name, salary)
